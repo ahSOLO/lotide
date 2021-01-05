@@ -1,13 +1,14 @@
 // Without function - takes an array and returns a new array with certain elements taken out.
 const without = function(arr, extract) {
+  let output = arr.slice(0);
   // loop through array
-  for (let i = 0; i < arr.length; i++) {    
+  for (let i = 0; i < output.length; i++) {    
     // loop through extract array
     for (let j = 0; j < extract.length; j++) {
       // check if array element is equal to any element in extract array    
-      if (arr[i] === extract[j]) {
+      if (output[i] === extract[j]) {
         // if met, remove the element from the original array
-        arr.splice(i, 1);
+        output.splice(i, 1);
         // adjust indexes so elements are not skipped
         i--;
         // restart at the beginning of the second for loop.
@@ -15,7 +16,7 @@ const without = function(arr, extract) {
       }
     }
   }
-  return arr;
+  return output;
 };
 
 // TEST FUNCTIONS
@@ -38,6 +39,11 @@ const assertArraysEqual = function(actual, expected) {
     console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
   }
 };
+
+const words = ["hello", "world", "lighthouse"];
+without(words, ["lighthouse"]); // no need to capture return value for this test case
+// Make sure the original array was not altered by the without function
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
 assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
 assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
