@@ -1,12 +1,14 @@
 // Function Implementation
 const letterPositions = function(sentence) {
-  let output = {};
-  for (const [key, value] of Object.entries(sentence)) {
-    if (!output[value]) output[value] = [];
-    if (output[value] !== " ") output[value].push(Number(key));
+  let results = {};
+  for (let i = 0; i < sentence.length; i++) {
+    if (results[sentence[i]]) {
+      results[sentence[i]].push(i);
+    } else if (sentence[i] != " ") {
+      results[sentence[i]] = [i];
+    }
   }
-  console.log(output);
-  return output;
+  return results;
 };
 
 
