@@ -58,7 +58,6 @@ assertEqual(eqObjects(cd, dc), true); // => true
 const cd2 = { c: "1", d: ["2", 3, 4] };
 assertEqual(eqObjects(cd, cd2), false); // => false
 
-
 assertEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true) // => true
 assertEqual(eqObjects({ a: { z: { y: 3 } }, b: 2 }, { a: { z: { y: 3 } } , b: 2 }), true) // => true
 assertEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false) // => false
