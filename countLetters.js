@@ -22,3 +22,5 @@ const assertEqual = function(actual, expected) {
 assertEqual(countLetters("crazya")["c"], 1);
 assertEqual(countLetters("crazya")["r"], 1);
 assertEqual(countLetters("crazya")["a"], 2);
+
+module.exports = countLetters;

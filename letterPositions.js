@@ -29,3 +29,5 @@ const obj = {
 
 assertArraysEqual(letterPositions("lighthouse in the house")["h"], obj["h"]);
 assertArraysEqual(letterPositions("lighthouse in the house")["e"], obj["e"]);
+
+module.exports = letterPositions;

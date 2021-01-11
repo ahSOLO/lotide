@@ -1,13 +1,5 @@
 const assertArraysEqual = require("./assertArraysEqual");
-
-const flatten = function (arr) {
-  let output = [];
-  for (i = 0; i < arr.length; i++) {
-    console.log(output);
-    flatRecursion(arr[i], output);
-  }
-  return output;
-};
+const flatten = require("./flatten");
 
 const flatRecursion = function (input, output) {
   if (Array.isArray(input)) {
