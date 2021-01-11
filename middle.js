@@ -1,5 +1,3 @@
-const assertArraysEqual = require("./assertArraysEqual");
-
 // Middle Function
 const middle = function(arr) {
   let output = [];
@@ -19,9 +17,4 @@ const middle = function(arr) {
   return output;
 };
 
-// TESTS
-
-assertArraysEqual(middle([1, 2, 3]), [2]) // => should pass
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]) // => should pass
-assertArraysEqual(middle([1, "2", 3, 4]), ["2", 3]) // => should pass
-assertArraysEqual(middle([1, 2, 3, 4]), [3]) // => should fail
+module.exports = middle;
