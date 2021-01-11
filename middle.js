@@ -1,3 +1,5 @@
+const assertArraysEqual = require("./assertArraysEqual");
+
 // Middle Function
 const middle = function(arr) {
   let output = [];
@@ -17,26 +19,7 @@ const middle = function(arr) {
   return output;
 };
 
-// TEST FUNCTIONS
-// Check if arrays are equal
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) return false;
-  if (arr1 === [] && arr2 !== []) return false;
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) return false;
-  }
-  return true;
-};
-
-// Check assertion that arrays are equal
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-  }
-  else {
-    console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+// TESTS
 
 assertArraysEqual(middle([1, 2, 3]), [2]) // => should pass
 assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]) // => should pass

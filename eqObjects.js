@@ -1,3 +1,5 @@
+const eqArrays = require("./eqArrays");
+
 // Function Implementation
 
 // Returns true if both objects have identical keys with identical values.
@@ -22,16 +24,6 @@ const eqObjects = function(object1, object2) {
     else if (object1[key] !== object2[key]) return false;
   }
   return recurReturn;
-};
-
-// Helper Function - eqArrays
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) return false;
-  if (arr1 === [] && arr2 !== []) return false;
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) return false;
-  }
-  return true;
 };
 
 // Test Function
