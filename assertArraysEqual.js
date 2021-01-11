@@ -1,5 +1,6 @@
 // Check if arrays are equal
 const eqArrays = function(arr1, arr2) {
+  console.log(arr1, arr2)
   if (arr1.length !== arr2.length) return false;
   if (arr1 === [] && arr2 !== []) return false;
   for (let i = 0; i < arr1.length; i++) {
@@ -18,8 +19,4 @@ const assertArraysEqual = function(actual, expected) {
   }
 };
 
-// Test Code
-assertArraysEqual([1, 2, 3], [1, 2, 3]) // => should pass
-assertArraysEqual([1, 2, 3], [3, 2, 1]) // => should fail
-assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]) // => should pass
-assertArraysEqual(["1", "2", "3"], ["1", "2", 3]) // => should fail
+module.exports = assertArraysEqual;
