@@ -1,4 +1,3 @@
-// Middle Function
 const middle = function(arr) {
   let output = [];
   // If array has 2 or less elements, return empty array

@@ -1,6 +1,3 @@
-const assertArraysEqual = require("./assertArraysEqual");
-
-// Function Implementation
 const letterPositions = function(sentence) {
   let results = {};
   for (let i = 0; i < sentence.length; i++) {

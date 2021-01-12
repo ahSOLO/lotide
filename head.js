@@ -1,4 +1,3 @@
-// FUNCTION IMPLEMENTATION
 const head = function(arr) {
   return arr[0];
 };

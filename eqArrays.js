@@ -1,6 +1,3 @@
-const assertEqual = require("./assertEqual")
-
-// Test Function
 const eqArrays = function(arr1, arr2) {
   recurReturn = true;
   if (arr1.length !== arr2.length) return false;

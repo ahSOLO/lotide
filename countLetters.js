@@ -1,4 +1,3 @@
-// Function Implementation
 const countLetters = function(sentence) {
   let input = sentence.split(" ").join("");
   let output = {};
